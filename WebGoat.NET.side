@@ -1,0 +1,233 @@
+{
+  "id": "96f19b51-7397-414e-bdba-71d70905fc4c",
+  "version": "2.0",
+  "name": "WebGoat.NET",
+  "url": "http://172.16.6.2",
+  "tests": [{
+    "id": "e2ef83db-523b-406c-a786-f38e498635dd",
+    "name": "versionCheck",
+    "commands": [{
+      "id": "28227fc4-60b9-49d8-8c79-411d8f17ace4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15ca1aee-f789-493d-a1cc-1454852c44f5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=(//div[contains(.,'[Jenkins#]')])",
+      "targets": [
+        ["id=ctl00_HeadLoginStatus", "id"],
+        ["linkText=登入", "linkText"],
+        ["css=#ctl00_HeadLoginStatus", "css:finder"],
+        ["xpath=//a[contains(text(),'登入')]", "xpath:link"],
+        ["xpath=//a[@id='ctl00_HeadLoginStatus']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[3]/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$HeadLoginStatus$ctl02','')\")]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'登入')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4f33623a-bbc0-4371-b48a-e34331a05c57",
+    "name": "loginFail",
+    "commands": [{
+      "id": "2216c506-f756-4fff-b015-f67563f3de1a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9779284-db29-4ed4-b2cb-b264314775f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [
+        ["id=ctl00_HeadLoginStatus", "id"],
+        ["linkText=登入", "linkText"],
+        ["css=#ctl00_HeadLoginStatus", "css:finder"],
+        ["xpath=//a[contains(text(),'登入')]", "xpath:link"],
+        ["xpath=//a[@id='ctl00_HeadLoginStatus']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[3]/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$HeadLoginStatus$ctl02','')\")]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'登入')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6ffc9f5-11cd-4934-84de-d26ddf381d2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=ctl00_BodyContentPlaceholder_txtUserName",
+      "targets": [
+        ["id=ctl00_BodyContentPlaceholder_txtUserName", "id"],
+        ["name=ctl00$BodyContentPlaceholder$txtUserName", "name"],
+        ["css=#ctl00_BodyContentPlaceholder_txtUserName", "css:finder"],
+        ["xpath=//input[@id='ctl00_BodyContentPlaceholder_txtUserName']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[4]/div/div[2]/div[4]/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "' or 1 = 1 --"
+    }, {
+      "id": "86003586-ac29-4ba7-886e-85b3e7941c3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_BodyContentPlaceholder_buttonLogOn",
+      "targets": [
+        ["id=ctl00_BodyContentPlaceholder_buttonLogOn", "id"],
+        ["name=ctl00$BodyContentPlaceholder$buttonLogOn", "name"],
+        ["css=#ctl00_BodyContentPlaceholder_buttonLogOn", "css:finder"],
+        ["xpath=//input[@id='ctl00_BodyContentPlaceholder_buttonLogOn']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[4]/div/div[2]/div[4]/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3b8243a-51ea-48ae-95ae-c2ce9ca78a05",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.error",
+      "targets": [
+        ["css=.error", "css:finder"],
+        ["xpath=//div[@id='ctl00_BodyContentPlaceholder_PanelError']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Incorrect username/password"
+    }]
+  }, {
+    "id": "350eb57b-090d-48fd-97b7-f274a6512425",
+    "name": "loginOk",
+    "commands": [{
+      "id": "51e38ed0-a7f4-4673-81d2-5d113c259f50",
+      "comment": "When visit WebGoat.NET web site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df0c97ae-60ce-49c8-ae89-44f796e7c1c1",
+      "comment": "Then 登入 link shown",
+      "command": "assertText",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [],
+      "value": "登入"
+    }, {
+      "id": "c6b5233c-e940-41ed-863e-8600b47a0a36",
+      "comment": "Given not login yet",
+      "command": "click",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [
+        ["id=ctl00_HeadLoginStatus", "id"],
+        ["linkText=登入", "linkText"],
+        ["css=#ctl00_HeadLoginStatus", "css:finder"],
+        ["xpath=//a[contains(text(),'登入')]", "xpath:link"],
+        ["xpath=//a[@id='ctl00_HeadLoginStatus']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[3]/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$HeadLoginStatus$ctl02','')\")]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'登入')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b228ef75-6815-4a1a-9324-9cb7d58e8ae8",
+      "comment": "And account name bob@ateliergraphique.com",
+      "command": "type",
+      "target": "id=ctl00_BodyContentPlaceholder_txtUserName",
+      "targets": [
+        ["id=ctl00_BodyContentPlaceholder_txtUserName", "id"],
+        ["name=ctl00$BodyContentPlaceholder$txtUserName", "name"],
+        ["css=#ctl00_BodyContentPlaceholder_txtUserName", "css:finder"],
+        ["xpath=//input[@id='ctl00_BodyContentPlaceholder_txtUserName']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[4]/div/div[2]/div[4]/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "bob@ateliergraphique.com"
+    }, {
+      "id": "b228ef75-6815-4a1a-9324-9cb7d58e8ae9",
+      "comment": "And password 123456",
+      "command": "type",
+      "target": "id=ctl00_BodyContentPlaceholder_txtPassword",
+      "value": "123456"
+    }, {
+      "id": "d90d0e70-e175-494d-b8ea-7d27adf03736",
+      "comment": "When click login button",
+      "command": "click",
+      "target": "id=ctl00_BodyContentPlaceholder_buttonLogOn",
+      "targets": [
+        ["id=ctl00_BodyContentPlaceholder_buttonLogOn", "id"],
+        ["name=ctl00$BodyContentPlaceholder$buttonLogOn", "name"],
+        ["css=#ctl00_BodyContentPlaceholder_buttonLogOn", "css:finder"],
+        ["xpath=//input[@id='ctl00_BodyContentPlaceholder_buttonLogOn']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[4]/div/div[2]/div[4]/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "852d3f37-737d-42e2-94e9-c80ec4f9c66f",
+      "comment": "Then account name bob@ateliergraphique.com shown",
+      "command": "assertText",
+      "target": "id=ctl00_HeadLoginView_HeadLoginName",
+      "targets": [],
+      "value": "bob@ateliergraphique.com"
+    }, {
+      "id": "34ea177a-abe3-49b8-a371-77ea7ed263f1",
+      "comment": "And logout link shown",
+      "command": "assertText",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [],
+      "value": "Logout"
+    }, {
+      "id": "54316c68-e168-4463-9be5-6c0ad6de1dce",
+      "comment": "Given login status",
+      "command": "click",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [
+        ["id=ctl00_HeadLoginStatus", "id"],
+        ["linkText=登入", "linkText"],
+        ["css=#ctl00_HeadLoginStatus", "css:finder"],
+        ["xpath=//a[contains(text(),'登入')]", "xpath:link"],
+        ["xpath=//a[@id='ctl00_HeadLoginStatus']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[3]/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:__doPostBack('ctl00$HeadLoginStatus$ctl02','')\")]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'登入')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7591e82c-fb10-4bd0-b0e0-b5110c1b22f5",
+      "comment": "When logout button clicked",
+      "command": "click",
+      "target": "id=ctl00_BodyContentPlaceholder_btnLogout",
+      "targets": [
+        ["id=ctl00_BodyContentPlaceholder_buttonLogOn", "id"],
+        ["name=ctl00$BodyContentPlaceholder$buttonLogOn", "name"],
+        ["css=#ctl00_BodyContentPlaceholder_buttonLogOn", "css:finder"],
+        ["xpath=//input[@id='ctl00_BodyContentPlaceholder_buttonLogOn']", "xpath:attributes"],
+        ["xpath=//form[@id='aspnetForm']/div[4]/div/div[2]/div[4]/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c9f8a4c-dde6-4951-8629-f4d84a787fda",
+      "comment": "Then 登入 link shown again",
+      "command": "assertText",
+      "target": "id=ctl00_HeadLoginStatus",
+      "targets": [],
+      "value": "登入"
+    }]
+  }],
+  "suites": [{
+    "id": "21b66b3f-11b8-44f8-bf2a-771b7e882e17",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4f33623a-bbc0-4371-b48a-e34331a05c57", "350eb57b-090d-48fd-97b7-f274a6512425", "e2ef83db-523b-406c-a786-f38e498635dd"]
+  }],
+  "urls": ["http://172.16.6.2/"],
+  "plugins": []
+}
