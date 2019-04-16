@@ -1100,5 +1100,5 @@
   </ItemGroup>
   <ItemGroup />
       <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&lt;'15.0'"/>
-      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&gt;'15.0'"/>
+      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&gt;='15.0'"/>
 </Project>
