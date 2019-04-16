@@ -6,7 +6,6 @@
 bin
 obj
 WebGoat/App_Data/*.txt
-*.sqlite*
 WebGoat/Configuration/*.config
 
 # Trash Files #
