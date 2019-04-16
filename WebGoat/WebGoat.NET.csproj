@@ -1099,14 +1099,6 @@
     <None Include="DB_Scripts\create_webgoatcoins_sqlite3.sql" />
   </ItemGroup>
   <ItemGroup />
-  <Choose>
-    <When Condition="'$(VisualStudioVersion)'&gt;='14.0'">
-      <Message Text="VisualStudioVersion is newer" Importance="high" />
-      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="false"/>
-    </When>
-    <When Condition="'$(VisualStudioVersion)'&lt;'15.0'">
-      <Message Text="VisualStudioVersion is older than 2017" Importance="high" />
-      <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="false"/>
-    </When>
-  </Choose>
+      <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&lt;'15.0'"/>
+      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&gt;'15.0'"/>
 </Project>
