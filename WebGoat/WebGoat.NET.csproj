@@ -1099,5 +1099,5 @@
     <None Include="DB_Scripts\create_webgoatcoins_sqlite3.sql" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VisualStudio\v16.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="false"/>
 </Project>
