@@ -1100,10 +1100,10 @@
   </ItemGroup>
   <ItemGroup />
   <Choose>
-    <When Condition="'$(VisualStudioVersion)'>='15.0'">
+    <When Condition="'$(VisualStudioVersion)'&gt;='15.0'">
       <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="false"/>
     </When>
-    <When Condition="'$(VisualStudioVersion)'<'15.0'">
+    <When Condition="'$(VisualStudioVersion)'&lt;'15.0'">
       <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="false"/>
     </When>
   </Choose>
