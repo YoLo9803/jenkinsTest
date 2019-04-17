@@ -1099,6 +1099,6 @@
     <None Include="DB_Scripts\create_webgoatcoins_sqlite3.sql" />
   </ItemGroup>
   <ItemGroup />
-      <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(MSBuildToolsPath)WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&lt;'15.0'"/>
-      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\$(MSBuildToolsPath)WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&gt;='15.0'"/>
+      <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(MSBuildToolsVersion)WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&lt;'15.0'"/>
+      <Import Project="$(MSBuildToolsPath)\..\..\Microsoft\VisualStudio\V$(VisualStudioVersion)\$(MSBuildToolsVersion)WebApplications\Microsoft.WebApplication.targets" Condition="'$(VisualStudioVersion)'&gt;='15.0'"/>
 </Project>
